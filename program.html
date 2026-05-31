@@ -34,8 +34,8 @@
 						<h1><a href="#">SYNT 2026</a></h1>
 						<span>15th Workshop on Synthesis</span>
                         
-						<!--<span>July 22 2026&mdash; Lisbon, Portugal</span>
-						<span>Co-located with the <a href="https://www.floc26.org/">Federated Logic Conference 2026</a></span>--!
+						<span>July 22 2026&mdash; Lisbon, Portugal</span>
+						<span>Co-located with the <a href="https://www.floc26.org/">Federated Logic Conference 2026</a></span>
                 
 					</div>
 					
@@ -44,7 +44,7 @@
 						<ul>
 							<!-- <li class="active"><a href="index.html">Home</a></li> -->
 							<li id="navIndex"><a href="index.html">Home</a></li>
-							<!--<li id="navProgram"><a href="program.html">Program</a></li>-->
+							<li id="navProgram"><a href="program.html">Program</a></li>-->
 							<li id="navCfp"><a href="cfp.html">CFP</a></li>
 							<li id="navCommittees"><a href="committees.html">Committees</a></li>
 							<li id="navInvited"><a href="invited.html">Invited Talks</a></li>
@@ -162,114 +162,222 @@ document.getElementById("navProgram").classList.add("active")
   <h3>Program</h3>
 </header>
 
-<table border="0" class="program">
-  <script type="text/javascript">
-    document.getElementById("navProgram").classList.add("active")
-    </script>
+<style>
+	/* Styles for the schedule layout */
+	.schedule-session { margin-top: 2.5em; margin-bottom: 1em; border-bottom: 2px solid #eee; padding-bottom: 5px; color: #d35400; }
+	.schedule-break { background-color: #f4f4f4; border-radius: 4px; padding: 12px; margin: 15px 0; font-weight: bold; text-align: center; color: #555; }
+	.keynote-block { background-color: #eaf2f8; border-left: 4px solid #3498db; padding: 12px 15px; margin: 15px 0; border-radius: 0 4px 4px 0; }
+	
+	/* Styles for the clickable accordion */
+	.paper-details { margin-bottom: 12px; border: 1px solid #e0e0e0; border-radius: 6px; padding: 10px 15px; background: #fff; transition: box-shadow 0.2s; }
+	.paper-details:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+	.paper-summary { cursor: pointer; outline: none; list-style: none; position: relative; padding-left: 20px; }
+	.paper-summary::-webkit-details-marker { display: none; } /* Hides default triangle */
+	
+	/* Custom plus/minus icon for the accordion */
+	.paper-summary::before { content: '+'; position: absolute; left: 0; top: 0; font-weight: bold; color: #888; font-size: 1.2em; line-height: 1; }
+	.paper-details[open] .paper-summary::before { content: '−'; }
+	
+	/* Typography for paper entries */
+	.paper-time { color: #7f8c8d; font-size: 0.9em; font-weight: bold; margin-bottom: 4px; display: block; }
+	.paper-title { font-size: 1.1em; color: #2c3e50; font-weight: bold; display: block; }
+	.paper-authors { font-weight: normal; font-style: italic; color: #555; font-size: 0.95em; display: block; margin-top: 4px; }
+	.paper-abstract { margin-top: 15px; padding-top: 15px; border-top: 1px dashed #ccc; color: #444; line-height: 1.6; }
+</style>
 
-  <tr class="talk">
-    <td width="150" class="time">8:30-9:00</td>
-    <td class="info">
-      <strong>Breakfast</strong><br/>
-    </td>
-  </tr>
+<div class="keynote-block">
+	<strong>09:10 - 10:00 | Keynote Talk 1</strong><br>
+	<em>Speaker: TBA</em>
+</div>
 
-  <tr class="talk">
-    <td class="time">9:00-10:00</td>
-    <td class="info">
-      <strong>Keynote: From Infinite to Finite Traces and Back</strong><br/>
-      Giuseppe De Giacomo, Oxford University<br/>
-    </td>
-  </tr>
+<div class="schedule-break">
+	☕ 10:00 - 10:25 | Coffee Break
+</div>
 
-  <tr class="talk">
-    <td class="time">10:00-10:30</td>
-    <td class="info">
-      <strong>Parameterized Infinite-State Reactive Synthesis</strong><br/>
-      Benedikt Maderbacher and Roderick Bloem<br/>
-    </td>
-  </tr>
+<h4 class="schedule-session">10:25 - 11:00 | Reactive Synthesis</h4>
 
-  <tr class="talk">
-    <td class="time">10:30-11:00</td>
-    <td class="info">
-      <strong>Coffee break</strong><br/>
-    </td>
-  </tr>
+<details class="paper-details">
+	<summary class="paper-summary">
+		<span class="paper-time">10:25 - 10:42</span>
+		<span class="paper-title">Natural Synthesis: Outperforming Reactive Synthesis Tools with Large Reasoning Models</span>
+		<span class="paper-authors">F. Schmitt, M. Cosler, N. Metzger, J. Siber, V. Krsmanović, M. Ghanem, B. Finkbeiner</span>
+	</summary>
+	<div class="paper-abstract">
+		<strong>Abstract:</strong> TBA
+	</div>
+</details>
 
-  <tr class="talk">
-    <td class="time">11:00-11:30</td>
-    <td class="info">
-      <strong>Program Synthesis And Non-monotonic Reasoning (Extended Abstract)</strong><br/>
-      Kedar Namjoshi<br/>
-    </td>
-  </tr>
+<details class="paper-details">
+	<summary class="paper-summary">
+		<span class="paper-time">10:42 - 10:59</span>
+		<span class="paper-title">Optimal LTLf Synthesis</span>
+		<span class="paper-authors">Y. Cao, S. Schewe, Q. Tang, S. Zhu</span>
+	</summary>
+	<div class="paper-abstract">
+		<strong>Abstract:</strong> TBA
+	</div>
+</details>
 
-  <tr class="talk">
-    <td class="time">11:30-12:00</td>
-    <td class="info">
-      <strong>Composing Reinforcement Learning Policies, with Formal Guarantees</strong><br/>
-      Florent Delgrange, Guy Avni, Anna Lukina, Christian Schilling, Ann Nowe and Guillermo Perez<br/>
-    </td>
-  </tr>
+<h4 class="schedule-session">11:00 - 12:25 | Games and Synthesis - I</h4>
 
-  <tr class="talk">
-    <td class="time">12:00-14:00</td>
-    <td class="info">
-      <strong>Lunch (provided)</strong><br/>
-    </td>
-  </tr>
+<details class="paper-details">
+	<summary class="paper-summary">
+		<span class="paper-time">11:00 - 11:17</span>
+		<span class="paper-title">From Quasipolynomial to Data-Parallel Algorithms for Verification Games Played on Graphs</span>
+		<span class="paper-authors">V. Flugel, M. Jurdzinski, G. Perez</span>
+	</summary>
+	<div class="paper-abstract">
+		<strong>Abstract:</strong> TBA
+	</div>
+</details>
 
-  <tr class="talk">
-    <td class="time">14:00-15:00</td>
-    <td class="info">
-      <strong>Keynote: GenAI, Automated Reasoning, and Synthesis for Cloud Computing</strong><br/>
-      Serdar Tasiran, AWS<br/>
-    </td>
-  </tr>
+<details class="paper-details">
+	<summary class="paper-summary">
+		<span class="paper-time">11:17 - 11:34</span>
+		<span class="paper-title">Lazy and Priority-Guided Product Construction for Non-Integer Discounted-Sum Synthesis</span>
+		<span class="paper-authors">R. Chandak, P. Golia</span>
+	</summary>
+	<div class="paper-abstract">
+		<strong>Abstract:</strong> TBA
+	</div>
+</details>
 
-  <tr class="talk">
-    <td class="time">15:00-15:30</td>
-    <td class="info">
-      <strong>Towards a Standard Benchmark Format for Synthesis of Infinite-State Reactive Systems</strong><br/>
-      Philippe Heim and Rayna Dimitrova<br/>
-    </td>
-  </tr>
+<details class="paper-details">
+	<summary class="paper-summary">
+		<span class="paper-time">11:34 - 11:51</span>
+		<span class="paper-title">Social Welfare under Heterogeneous Time Preferences</span>
+		<span class="paper-authors">S. Bahmani, S. Paul, S. Schewe, S. Kalat, A. Trivedi</span>
+	</summary>
+	<div class="paper-abstract">
+		<strong>Abstract:</strong> TBA
+	</div>
+</details>
 
-  <tr class="talk">
-    <td class="time">15:30-16:00</td>
-    <td class="info">
-      <strong>Coffee break</strong><br/>
-    </td>
-  </tr>
+<details class="paper-details">
+	<summary class="paper-summary">
+		<span class="paper-time">11:51 - 12:08</span>
+		<span class="paper-title">Games on Temporal Graphs</span>
+		<span class="paper-authors">S. Bose</span>
+	</summary>
+	<div class="paper-abstract">
+		<strong>Abstract:</strong> TBA
+	</div>
+</details>
 
-  <tr class="talk">
-    <td class="time">16:00-16:30</td>
-    <td class="info">
-      <strong>Generating Implementations of Data Type Operations</strong><br/>
-      Anthony Hunt and Emil Sekerinski<br/>
-    </td>
-  </tr>
+<details class="paper-details">
+	<summary class="paper-summary">
+		<span class="paper-time">12:08 - 12:25</span>
+		<span class="paper-title">Sure-almost-sure and Sure-limit-sure Window Mean Payoff in Markov Decision Processes</span>
+		<span class="paper-authors">P. Gaba, S. Guha</span>
+	</summary>
+	<div class="paper-abstract">
+		<strong>Abstract:</strong> TBA
+	</div>
+</details>
 
-  <tr class="talk">
-    <td class="time">16:30-17:00</td>
-    <td class="info">
-      <strong>Synthesis of Safety Controllers with Plant Prophecies</strong><br/>
-      Bernd Finkbeiner, Niklas Metzger, Satya Prakash Nayak and Anne-Kathrin Schmuck<br/>
-    </td>
-  </tr>
+<div class="schedule-break">
+	🍽️ 12:25 - 13:45 | Lunch Break
+</div>
 
-  <tr class="talk">
-    <td class="time">17:00-17:30</td>
-    <td class="info">
-      <strong>SYNTCOMP Results</strong><br/>
-    </td>
-  </tr>
-</table>
+<div class="keynote-block">
+	<strong>13:45 - 14:35 | Keynote Talk 2</strong><br>
+	<em>Speaker: TBA</em>
+</div>
 
+<h4 class="schedule-session">14:35 - 15:30 | Functional & Quantum Synthesis</h4>
+
+<details class="paper-details">
+	<summary class="paper-summary">
+		<span class="paper-time">14:35 - 14:52</span>
+		<span class="paper-title">Multiple Definitions from a Single Resolution Proof</span>
+		<span class="paper-authors">F. Slivovsky</span>
+	</summary>
+	<div class="paper-abstract">
+		<strong>Abstract:</strong> TBA
+	</div>
+</details>
+
+<details class="paper-details">
+	<summary class="paper-summary">
+		<span class="paper-time">14:52 - 15:09</span>
+		<span class="paper-title">Structure Analysis in Boolean Functional Synthesis</span>
+		<span class="paper-authors">Z. Avissar, D. Fried</span>
+	</summary>
+	<div class="paper-abstract">
+		<strong>Abstract:</strong> TBA
+	</div>
+</details>
+
+<details class="paper-details">
+	<summary class="paper-summary">
+		<span class="paper-time">15:09 - 15:26</span>
+		<span class="paper-title">Reducing Quantum Circuit Synthesis to #SAT</span>
+		<span class="paper-authors">D. Zak, J. Mei, J. Lagniez, A. Laarman</span>
+	</summary>
+	<div class="paper-abstract">
+		<strong>Abstract:</strong> TBA
+	</div>
+</details>
+
+<div class="schedule-break">
+	☕ 15:30 - 15:55 | Coffee Break
+</div>
+
+<div class="keynote-block">
+	<strong>15:55 - 16:45 | Keynote Talk 3</strong><br>
+	<em>Speaker: TBA</em>
+</div>
+
+<h4 class="schedule-session">16:45 - 17:20 | Games and Synthesis - 2</h4>
+
+<details class="paper-details">
+	<summary class="paper-summary">
+		<span class="paper-time">16:45 - 17:02</span>
+		<span class="paper-title">Maximizing Independence in Auction-Based Scheduling via Successive Refinement</span>
+		<span class="paper-authors">G. Avni, K. Mallik, S. Sadhukhan, T. Yarkoni</span>
+	</summary>
+	<div class="paper-abstract">
+		<strong>Abstract:</strong> TBA
+	</div>
+</details>
+
+<details class="paper-details">
+	<summary class="paper-summary">
+		<span class="paper-time">17:02 - 17:19</span>
+		<span class="paper-title">Resolving Nondeterminism by Chance</span>
+		<span class="paper-authors">S. Paul, D. Purser, S. Schewe, Q. Tang, P. Totzk, D. Yen</span>
+	</summary>
+	<div class="paper-abstract">
+		<strong>Abstract:</strong> TBA
+	</div>
+</details>
+
+<h4 class="schedule-session">17:20 - 18:00 | Program Synthesis</h4>
+
+<details class="paper-details">
+	<summary class="paper-summary">
+		<span class="paper-time">17:20 - 17:37</span>
+		<span class="paper-title">NSynC: Normalised Synthesis of Computation</span>
+		<span class="paper-authors">Z. Shepherd, O. Kammar, E. Polgreen</span>
+	</summary>
+	<div class="paper-abstract">
+		<strong>Abstract:</strong> TBA
+	</div>
+</details>
+
+<details class="paper-details">
+	<summary class="paper-summary">
+		<span class="paper-time">17:37 - 17:54</span>
+		<span class="paper-title">Liquify your Programs</span>
+		<span class="paper-authors">R. Goswami, A. Mishra</span>
+	</summary>
+	<div class="paper-abstract">
+		<strong>Abstract:</strong> TBA
+	</div>
+</details>
 		</div>
 
-	</body>
+</body>
 
 <script>
 var coll = document.getElementsByClassName("collapsible");
